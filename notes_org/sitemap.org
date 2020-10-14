@@ -1,0 +1,6 @@
+#+TITLE: Sitemap
+
+- [[file:index.org][wwww]]
+- wiki
+  - [[file:wiki/how to use org-mode.org][org-mode 简单入门]]
+  - [[file:wiki/clash for Linux.org][clash for Linux 安装]]

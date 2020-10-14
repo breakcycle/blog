@@ -1,0 +1,95 @@
+#+STARTUP:indent
+#+SETUPFILE: f:/blog/tpl/site-tpl.org
+#+TITLE:org-mode 简单入门
+
+* 学习笔记
+** 标题
+- #+STARTUP:indent 简洁模式
+
+- Tab 展开折叠
+
+- M+left/right 升降级标题
+
+** 列表
+无序列表如下：
+
+- treeroot
+  + brachk1
+  + brach2
+
+有序列表如下：
+
+1) [-] task1 [50%]
+   1) [ ] subtask1
+   2) [X] subtask2
+2) [ ] task2
+
+提示(同级下不能同时用序号和-,需要解决)
+
+- M+RET(Enter)自动输入同级条目 按M+left/right调整层
+- C-c C-c 改变CheckBox状态，即task后的[]，可添加%、/两种符号，自动更新
+- C-c C-* 改变[]成DONE/TODO样式 C-c C-t在DONE和TODO切换
+- C-c 设置优先级(ABC)
+
+** TODO TODO清单样例 [4/4]
+*** DONE call people [3/3] 
+**** DONE Peter
+**** DONE Sarah
+**** DONE Sam
+*** DONE order food
+*** DONE think about sth
+*** DONE talk to the nb
+
+** 脚注
+
+  用[fn: n]的方式插入[fn:1]
+
+** 表格
+
+  输入表头后在第二行添加|-后按tab表格会自动生成,最后一行按tab自动添加下一行：
+- C-c | 通过输入大小的方式插入表格
+- tab 跳到右一表格 加S 反方向跳
+- enter 跳到下方表格
+- M-方向键 移动
+- M-S-方向键 插入/删除行(列)
+| name   |   phone | sub1 | sub2 |      total |
+|--------+---------+------+------+------------|
+| wang   | 1785411 |   12 |   21 | 0.57142857 |
+| frank  |   54658 |   11 |   11 |          1 |
+| zarker |     654 |   22 |   22 |          1 |
+
+ =#+TBLFM: $5=$3/$4=
+
+** 链接
+  用于链接资源，格式：
+#+BEGIN_SRC
+- [[链接地址][名称]]
+- [[http://][xxx]]
+- [[file:.../][xx]]
+#+END_SRC
+ 显示原有格式用：
+#+BEGIN_SRC 
+- #+BEGIN_SRC
+- #+END_SRC
+#+END_SRC
+若资源为图片时，不写名称，则直接显示图片
+[[file:E:/Users/frank/Desktop/illust_64495434_20200518_152634.jpg]]
+
+** 标签 
+- C-c C-q 给每一章节添加标签
+- C-c \ 生成带标签的树
+** 时间
+ 输入C-c . 插入日历
+*** TODO 
+SCHEDULED:<2020-10-13 周二 11:11>
+DEADLINE:<2020-10-14 周三 12:12>
+** 特殊文本格式
+*加粗*
+/斜体/
+_下划线_
+=代码块=
+~ver~
++划线+
+* Footnotes
+
+[fn:1] https://orgmode.org/org.html

@@ -1,0 +1,24 @@
+#+STARTUP:indent
+#+SETUPFILE: f:/blog/tpl/site-tpl.org
+#+TITLE:clash for Linux 安装
+
+* clash for Linux 
+相比于其他Linux版本的梯子，clash的配置最为简单，出错也很少。
+** clash 下载
+选择对应版本[[https://github.com/Dreamacro/clash/releases][下载]]到本地后解压并重命名为clash。
+** clash config.yaml配置
+在终端 =cd= 进入clash文件夹。
+- 如果梯子网站上有clash支持 
+  + 执行 =wget -O config.yaml https://..= 从对应梯子网站上下载配置。
+- 如果网站没有clash支持
+  + 从GitHub上下载[[https://github.com/tindy2013/subconverter/releases][subconverter]]，阅读[[https://github.com/tindy2013/subconverter/blob/master/README-cn.md][使用说明]]进行clash.yaml的配置。
+  + subconverter是一种能在各种梯子之间进行链接转换的工具(如果转换不成功加 =sudo= )。
+** clash 系统代理配置
+ 打开系统设置，选择网络代理，填写HTTP和HTTPS代理为 =127.0.0.1:7890= ,填写Socks主机为 =127.0.0.1:7891= ，即可启用系统代理。注意随时关停系统代理。
+** clash 启动
+- 执行 =./clash -d .= 即可启动clash，同时启动HTTP代理和Socks5代理。如果提示权限不足，请执行 =chmod +x clash=
+- 访问[[http://clash.razord.top/][Clash Dashboard]]可以进行节点的切换等操作。Host: =127.0.0.1= ,端口: =9090=
+** 梯子推荐
+  这是我经常用的[[https://geess.pw/auth/register?code=iGX4][梯子]]。
+
+
